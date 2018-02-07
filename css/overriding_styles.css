@@ -1,3 +1,8 @@
 header.masthead{
     padding-top: 2rem;
 }
+
+strong.pageTitle{
+    letter-spacing: 2px;
+    font-weight: lighter;
+}
