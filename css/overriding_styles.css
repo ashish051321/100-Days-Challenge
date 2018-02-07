@@ -6,3 +6,7 @@ strong.pageTitle{
     letter-spacing: 2px;
     font-weight: lighter;
 }
+
+.mypic{
+    border: 3px solid white !important;
+}
