@@ -4,4 +4,12 @@ document.addEventListener("DOMContentLoaded",function(){
     let myprojects = myProjectContainer.querySelectorAll("div.col-lg-4");
     // alert(myprojects.length);
     document.querySelector("span#projectCount").textContent = myprojects.length;
+
+    
+    $('#datepicker').Zebra_DatePicker({
+        always_visible: $('#datecontainer')
+    });
+
+
+
 });
