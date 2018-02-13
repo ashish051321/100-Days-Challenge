@@ -1,18 +1,15 @@
 
 document.addEventListener("DOMContentLoaded", () => {
-
-    var elt = document.querySelector("div.container");
+    // global variables
     var widthOfImageElements = [];
     var imageElements = [];
 
-    setTimeout(()=>{
+    setTimeout(() => {
         adjustImages();
-    },2000);
+    }, 2000);
 
-    window.onresize = function () {
-        //Here I am going to get my image slider correct
-        adjustImages();
-    };
+    window.onresize = adjustImages;
+
 
     function adjustImages() {
         document.querySelectorAll("div.container img.item").forEach((elt) => {
@@ -50,5 +47,22 @@ document.addEventListener("DOMContentLoaded", () => {
             index--;
         }
     }
+
+
+    //When the checkbox is checked, the getBoundingClientRect effect is removed
+    document.querySelector("input#removeEffect").addEventListener("click", (event) => { 
+        if(event.target.checked){
+            window.onresize = null;
+            document.querySelectorAll("div.container img.item").forEach((elt) => {
+                elt.style.display = "inline-block";
+            });
+    
+        }
+        else{
+            adjustImages();
+            window.onresize = adjustImages();
+        }
+    });
+
 
 });

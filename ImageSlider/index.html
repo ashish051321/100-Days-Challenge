@@ -12,17 +12,17 @@
 </head>
 
 <body class="bg-lightest-blue pa2">
-    <h2>Now, the idea here is very simple, 
-        I have a bunch of images that are shown 
-        in the slider here.
-        I dont want half-cut images to appear. 
-        So, with the help of "getBoundingClientRect" method, we have achieved the effect.
-        <br><strong>Try resizing the window and see the effect in action !</strong>
+    <h2>Now, the idea here is very simple, I have a bunch of images that are shown in the slider here. I dont want half-cut images
+        to appear. So, with the help of "getBoundingClientRect" method, we have achieved the effect.
+        <br>
+        <br>
+        <strong>Try resizing the window and see the effect in action !</strong>
 
     </h2>
-    <div class="outline container flex pa2 justify-between">
+    <!-- Please note the usage of inline-flex , instead of flex here !! -->
+    <div class="outline container inline-flex pa2 justify-between">
         <div id="leftPivot" class="tc f4 flex items-center margin-right-10">...</div>
-        <div id="myImages" class="flex flex-nowrap ">
+        <div id="myImages" class="flex flex-nowrap flex-1 justify-center ">
             <img src="https://source.unsplash.com/350x201" alt="" class="item">
             <img src="https://source.unsplash.com/350x202" alt="" class="item">
             <img src="https://source.unsplash.com/350x203" alt="" class="item">
@@ -30,6 +30,12 @@
             <img src="https://source.unsplash.com/350x205" alt="" class="item">
         </div>
         <div id="rightPivot" class="tc f4 flex items-center margin-left-10">...</div>
+    </div>
+
+    <!-- When the checkbox is checked, the getBoundingClientRect effect is removed -->
+    <div class="customizations flex items-center">
+        <input type="checkbox" name="removeEffect" id="removeEffect">
+        <label for="removeEffect" class="flex-1">Remove getBoundingClientRect effect !!</label>
     </div>
 
     <!-- <script src="js/jquery.min.js"></script>
