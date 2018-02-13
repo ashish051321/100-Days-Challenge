@@ -1,0 +1,37 @@
+div.container{
+    width: 80%;
+    margin:0 auto;
+    /* you can change this width or the display property
+    of the container itself to position and place the
+     image slider on the page you are using it. */
+}
+div#myImages{
+    overflow-x: hidden;
+    /* height:200px; */
+  }
+  
+  
+  div.container > div#myImages> img.item{
+    display: block;
+    height:100px;
+    margin-right: 10px;
+  }
+  
+  .flex-1{
+    flex:1;
+  }
+  div#leftPivot , div#rightPivot{
+    cursor: pointer;
+    flex-basis: 20px;
+  }
+  div#leftPivot:hover , div#rightPivot:hover{
+    font-weight: bolder;
+  }
+  
+  .margin-left-10{
+     margin-left:10px;
+  }
+
+  .margin-right-10{
+    margin-right:10px;
+ }
